@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		93D15E472EAC0D49008B97D5 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 93D15E462EAC0D49008B97D5 /* Network */; };
+		93D15E792EAC17E8008B97D5 /* PlacesDataProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 93D15E782EAC17E8008B97D5 /* PlacesDataProvider */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		93D15E1F2EAC074A008B97D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -19,6 +24,8 @@
 /* Begin PBXFileReference section */
 		93D15E112EAC0749008B97D5 /* ABN-AMRO-iOS-Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABN-AMRO-iOS-Case.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D15E1E2EAC074A008B97D5 /* ABN-AMRO-iOS-CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ABN-AMRO-iOS-CaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D15E442EAC0D3D008B97D5 /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
+		93D15E6F2EAC168C008B97D5 /* DataProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataProvider; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D15E472EAC0D49008B97D5 /* Network in Frameworks */,
+				93D15E792EAC17E8008B97D5 /* PlacesDataProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +64,11 @@
 		93D15E082EAC0749008B97D5 = {
 			isa = PBXGroup;
 			children = (
+				93D15E6F2EAC168C008B97D5 /* DataProvider */,
+				93D15E442EAC0D3D008B97D5 /* Network */,
 				93D15E132EAC0749008B97D5 /* ABN-AMRO-iOS-Case */,
 				93D15E212EAC074A008B97D5 /* ABN-AMRO-iOS-CaseTests */,
+				93D15E452EAC0D49008B97D5 /* Frameworks */,
 				93D15E122EAC0749008B97D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +80,13 @@
 				93D15E1E2EAC074A008B97D5 /* ABN-AMRO-iOS-CaseTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		93D15E452EAC0D49008B97D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +109,8 @@
 			);
 			name = "ABN-AMRO-iOS-Case";
 			packageProductDependencies = (
+				93D15E462EAC0D49008B97D5 /* Network */,
+				93D15E782EAC17E8008B97D5 /* PlacesDataProvider */,
 			);
 			productName = "ABN-AMRO-iOS-Case";
 			productReference = 93D15E112EAC0749008B97D5 /* ABN-AMRO-iOS-Case.app */;
@@ -479,6 +500,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93D15E462EAC0D49008B97D5 /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
+		};
+		93D15E782EAC17E8008B97D5 /* PlacesDataProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlacesDataProvider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93D15E092EAC0749008B97D5 /* Project object */;
 }
