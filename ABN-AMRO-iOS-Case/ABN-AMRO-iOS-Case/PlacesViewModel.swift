@@ -16,6 +16,15 @@ final class PlacesViewModel: ObservableObject {
     @Published var places: [PlaceViewData] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    
+    let navigationTitle = "Places"
+    let loadingMessage = "Loading places..."
+    let loadingAccessibilityLabel = "Loading places"
+    let noPlacesTitle = "No Places Found"
+    let noPlacesDescription = "There are no places to display at the moment."
+    let noPlacesAccessibilityLabel = "No places found"
+    let errorTitle = "Error"
+    let wikipediaHint = "Double tap to open Wikipedia with this location"
         
     init(repository: FetchPlacesRepositoryProtocol) {
         self.repository = repository
