@@ -5,13 +5,21 @@
 //  Created by Onur Kara on 24/10/2025.
 //
 
+import Network
 import SwiftUI
+import PlacesDataProvider
 
 @main
 struct ABN_AMRO_iOS_CaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PlacesView(viewModel: createViewModel())
         }
+    }
+
+    private func createViewModel() -> PlacesViewModel {
+        let networkManager = NetworkManager(baseURL: "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/")
+        let repository = FetchPlacesRepository(networkManager: networkManager)
+        return PlacesViewModel(repository: repository)
     }
 }
