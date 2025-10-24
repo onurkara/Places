@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol NetworkSessionable {
+public protocol NetworkSessionable: Sendable {
 
     func data(for url: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
 }
