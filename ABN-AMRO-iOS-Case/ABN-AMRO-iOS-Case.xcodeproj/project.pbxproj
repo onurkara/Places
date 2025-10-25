@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		93D15E472EAC0D49008B97D5 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 93D15E462EAC0D49008B97D5 /* Network */; };
 		93D15E792EAC17E8008B97D5 /* PlacesDataProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 93D15E782EAC17E8008B97D5 /* PlacesDataProvider */; };
+		93D15F2F2EACCC65008B97D5 /* Util in Frameworks */ = {isa = PBXBuildFile; productRef = 93D15F2E2EACCC65008B97D5 /* Util */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,11 +27,25 @@
 		93D15E1E2EAC074A008B97D5 /* ABN-AMRO-iOS-CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ABN-AMRO-iOS-CaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D15E442EAC0D3D008B97D5 /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
 		93D15E6F2EAC168C008B97D5 /* DataProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataProvider; sourceTree = "<group>"; };
+		93D15F2D2EACCC38008B97D5 /* Util */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Util; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		93D15F112EACC88C008B97D5 /* Exceptions for "ABN-AMRO-iOS-Case" folder in "ABN-AMRO-iOS-Case" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 93D15E102EAC0749008B97D5 /* ABN-AMRO-iOS-Case */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		93D15E132EAC0749008B97D5 /* ABN-AMRO-iOS-Case */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				93D15F112EACC88C008B97D5 /* Exceptions for "ABN-AMRO-iOS-Case" folder in "ABN-AMRO-iOS-Case" target */,
+			);
 			path = "ABN-AMRO-iOS-Case";
 			sourceTree = "<group>";
 		};
@@ -48,6 +63,7 @@
 			files = (
 				93D15E472EAC0D49008B97D5 /* Network in Frameworks */,
 				93D15E792EAC17E8008B97D5 /* PlacesDataProvider in Frameworks */,
+				93D15F2F2EACCC65008B97D5 /* Util in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +82,7 @@
 			children = (
 				93D15E6F2EAC168C008B97D5 /* DataProvider */,
 				93D15E442EAC0D3D008B97D5 /* Network */,
+				93D15F2D2EACCC38008B97D5 /* Util */,
 				93D15E132EAC0749008B97D5 /* ABN-AMRO-iOS-Case */,
 				93D15E212EAC074A008B97D5 /* ABN-AMRO-iOS-CaseTests */,
 				93D15E452EAC0D49008B97D5 /* Frameworks */,
@@ -111,6 +128,7 @@
 			packageProductDependencies = (
 				93D15E462EAC0D49008B97D5 /* Network */,
 				93D15E782EAC17E8008B97D5 /* PlacesDataProvider */,
+				93D15F2E2EACCC65008B97D5 /* Util */,
 			);
 			productName = "ABN-AMRO-iOS-Case";
 			productReference = 93D15E112EAC0749008B97D5 /* ABN-AMRO-iOS-Case.app */;
@@ -346,6 +364,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ABN-AMRO-iOS-Case/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -388,6 +407,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ABN-AMRO-iOS-Case/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -509,6 +529,10 @@
 		93D15E782EAC17E8008B97D5 /* PlacesDataProvider */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlacesDataProvider;
+		};
+		93D15F2E2EACCC65008B97D5 /* Util */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Util;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
