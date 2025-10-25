@@ -29,13 +29,24 @@ struct PlacesView: View {
             .task {
                 await viewModel.fetchPlaces()
             }
+            .alert(viewModel.errorTitle, isPresented: $viewModel.showAlert) {
+                Button(viewModel.alertButtonOK) {
+                    viewModel.showAlert = false
+                }
+            } message: {
+                Text(viewModel.alertMessage)
+            }
         }
     }
 
     private var placesList: some View {
         List(viewModel.places) { place in
             PlaceRowView(place: place)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(Rectangle())
+                .onTapGesture {
+                    viewModel.openWikipediaDeepLink(for: place)
+                }
                 .accessibilityElement(children: .combine)
                 .accessibilityLabel(accessibilityLabel(place: place))
                 .accessibilityHint(viewModel.wikipediaHint)
@@ -62,9 +73,9 @@ struct PlacesView: View {
     }
 
     private func accessibilityLabel(place: PlaceViewData) -> String {
-        var label = "Location: \(place.name)"
+        var label = viewModel.locationPrefix + (place.name)
         if let latitude = place.latitude, let longitude = place.longitude {
-            label += ", Coordinates: Latitude \(String(format: "%.4f", latitude)), Longitude \(String(format: "%.4f", longitude))"
+            label += viewModel.coordinatesPrefix + String(format: "%.4f", latitude) + viewModel.longitudePrefix + String(format: "%.4f", longitude)
         }
 
         return label
